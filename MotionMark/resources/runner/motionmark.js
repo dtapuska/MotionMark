@@ -177,19 +177,19 @@ class BenchmarkController {
 
     determineCanvasSize()
     {
-        var match = window.matchMedia("(max-device-width: 760px)");
+        var match = window.matchMedia("(max-device-width: 760px) or (max-device-height: 500px)");
         if (match.matches) {
             document.body.classList.add("small");
             return;
         }
 
-        match = window.matchMedia("(max-device-width: 1600px)");
+        match = window.matchMedia("(max-device-width: 1600px) or (max-device-height: 900px)");
         if (match.matches) {
             document.body.classList.add("medium");
             return;
         }
 
-        match = window.matchMedia("(max-width: 1600px)");
+        match = window.matchMedia("(max-width: 1600px) or (max-height: 900px)");
         if (match.matches) {
             document.body.classList.add("medium");
             return;
